@@ -1,5 +1,5 @@
 const APP= {
-    ver:"1.0.0",user: {
+    ver:"1.1.0",user: {
         id:0
     },
     cfg: {
