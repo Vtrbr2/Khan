@@ -45,208 +45,173 @@ class UI {
             position:"fixed",top:"10px",right:"15px",width:"220px",background:"linear-gradient(145deg, #2a0a4a, #1a0630)",borderRadius:"12px",display:"flex",flexDirection:"column",padding:"12px",zIndex:"9999",boxShadow:"0 4px 15px rgba(106, 13, 173, 0.5)",border:"1px solid #6a0dad",maxWidth:"90%"
         };
         Object.assign(panel.style,panelStyle);
-        panel.innerHTML=`<style>            border-bottom:1px solid#6a0dad;
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');   
-          #crimson-panel {
-    font-family: 'Press Start 2P', monospace;
-}  
-            
-            .crimson-header {
-    color:#00ffff;
-    font-size:18px;
-    font-weight:bold;
-    text-align:center;
-    margin-bottom:10px;
-    padding-bottom:10px;
-    border-bottom:1px solid #00ffff;
-    cursor:pointer;
-    user-select:none;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:8px;
-    text-shadow:0 0 6px #00ffff;
-}
-
-.crimson-header:after {
-    content:"▼";
-    font-size:12px;
-    margin-left:5px;
-    transition:transform 0.3s ease;
-    color:#00ffff;
-}
-
-.crimson-header.collapsed:after {
-    transform:rotate(-90deg);
-}
-
-.crimson-content {
-    transition:max-height 0.3s ease,opacity 0.3s ease;
-    max-height:500px;
-    opacity:1;
-    overflow:hidden;
-}
-
-.crimson-content.collapsed {
-    max-height:0;
-    opacity:0;
-}
-
-.crimson-version {
-    color:#6f6f6f;
-    font-size:12px;
-    font-weight:normal;
-}
-
-.crimson-logo {
-    height:24px;
-    width:24px;
-    border-radius:50%;
-    object-fit:cover;
-    filter:drop-shadow(0 0 4px #ff0000);
-}
-
-.crimson-opt {
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    color:#cfcfcf;
-    padding:8px;
-    margin:4px 0;
-    background:#0a0a0a;
-    border-radius:6px;
-    border:1px solid #1f1f1f;
-    transition:all 0.25s ease;
-}
-
-.crimson-opt:hover {
-    background:#111;
-    box-shadow:0 0 6px #00ffff;
-}
-
-.switch {
-    position:relative;
-    display:inline-block;
-    width:44px;
-    height:22px;
-}
-
-.switch input {
-    opacity:0;
-    width:0;
-    height:0;
-}
-
-.slider {
-    position:absolute;
-    cursor:pointer;
-    inset:0;
-    background-color:#333;
-    transition:.4s;
-    border-radius:22px;
-}
-
-.slider:before {
-    position:absolute;
-    content:"";
-    height:18px;
-    width:18px;
-    left:2px;
-    bottom:2px;
-    background-color:#cfcfcf;
-    transition:.4s;
-    border-radius:50%;
-}
-
-input:checked + .slider {
-    background:#ff0000;
-    box-shadow:0 0 6px #ff0000;
-}
-
-input:checked + .slider:before {
-    transform:translateX(22px);
-    background:#fff;
-}
-
-.crimson-credit {
-    color:#6f6f6f;
-    font-size:11px;
-    text-align:center;
-    margin-top:10px;
-    padding-top:10px;
-    border-top:1px solid #1f1f1f;
-}
-
-.speed-slider-container {
-    width:100%;
-    margin-top:5px;
-    padding:0 2px;
-    box-sizing:border-box;
-}
-
-.speed-slider {
-    -webkit-appearance:none;
-    width:100%;
-    height:6px;
-    border-radius:5px;
-    background:#333;
-    outline:none;
-    margin:10px 0;
-}
-
-.speed-slider::-webkit-slider-thumb {
-    -webkit-appearance:none;
-    appearance:none;
-    width:16px;
-    height:16px;
-    border-radius:50%;
-    background:#00ffff;
-    box-shadow:0 0 6px #00ffff;
-    cursor:pointer;
-}
-
-.speed-slider::-moz-range-thumb {
-    width:16px;
-    height:16px;
-    border-radius:50%;
-    background:#00ffff;
-    box-shadow:0 0 6px #00ffff;
-    cursor:pointer;
-    border:none;
-}
-
-.speed-value {
-    display:none;
-}
-
-.discord-btn {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:6px;
-    width:100%;
-    padding:8px;
-    margin-top:8px;
-    background:#000;
-    color:#00ffff;
-    border:1px solid #00ffff;
-    border-radius:6px;
-    cursor:pointer;
-    font-weight:bold;
-    text-shadow:0 0 6px #00ffff;
-    transition:all 0.3s ease;
-}
-
-.discord-btn:hover {
-    background:#00ffff;
-    color:#000;
-    box-shadow:0 0 12px #00ffff;
-}
-
-.discord-icon {
-    width:16px;
-    height:16px;
-}
+        panel.innerHTML=`<style>.crimson-header {
+            color:#fff;
+            font-size:18px;
+            font-weight:bold;
+            text-align:center;
+            margin-bottom:10px;
+            padding-bottom:10px;
+            border-bottom:1px solid#6a0dad;
+            cursor:pointer;
+            user-select:none;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:8px
+        }
+        .crimson-header:after {
+            content:"â–¼";
+            font-size:12px;
+            margin-left:5px;
+            transition:transform 0.3s ease;
+            color:#b388ff
+        }
+        .crimson-header.collapsed:after {
+            transform:rotate(-90deg)
+        }
+        .crimson-content {
+            transition:max-height 0.3s ease,opacity 0.3s ease;
+            max-height:500px;
+            opacity:1;
+            overflow:hidden
+        }
+        .crimson-content.collapsed {
+            max-height:0;
+            opacity:0
+        }
+        .crimson-version {
+            color:#b388ff;
+            font-size:12px;
+            font-weight:normal
+        }
+        .crimson-logo {
+            height:24px;
+            width:24px;
+            border-radius:50%;
+            object-fit:cover
+        }
+        .crimson-opt {
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            color:#fff;
+            padding:8px;
+            margin:3px 0;
+            background:rgba(106,13,173,0.2);
+            border-radius:8px;
+            transition:all 0.3s ease
+        }
+        .crimson-opt:hover {
+            background:rgba(106,13,173,0.3)
+        }
+        .switch {
+            position:relative;
+            display:inline-block;
+            width:44px;
+            height:22px
+        }
+        .switch input {
+            opacity:0;
+            width:0;
+            height:0
+        }
+        .slider {
+            position:absolute;
+            cursor:pointer;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            background-color:#333;
+            transition:.4s;
+            border-radius:22px
+        }
+        .slider:before {
+            position:absolute;
+            content:"";
+            height:18px;
+            width:18px;
+            left:2px;
+            bottom:2px;
+            background-color:white;
+            transition:.4s;
+            border-radius:50%
+        }
+        input:checked+.slider {
+            background:linear-gradient(145deg,#6a0dad,#9c27b0)
+        }
+        input:checked+.slider:before {
+            transform:translateX(22px)
+        }
+        .crimson-credit {
+            color:#b388ff;
+            font-size:11px;
+            text-align:center;
+            margin-top:10px;
+            padding-top:10px;
+            border-top:1px solid#6a0dad
+        }
+        .speed-slider-container {
+            width:100%;
+            margin-top:5px;
+            padding:0 2px;
+            box-sizing:border-box;
+            overflow:visible
+        }
+        .speed-slider {
+            -webkit-appearance:none;
+            width:100%;
+            height:8px;
+            border-radius:5px;
+            background:#333;
+            outline:none;
+            margin:10px 0
+        }
+        .speed-slider::-webkit-slider-thumb {
+            -webkit-appearance:none;
+            appearance:none;
+            width:18px;
+            height:18px;
+            border-radius:50%;
+            background:linear-gradient(145deg,#6a0dad,#9c27b0);
+            cursor:pointer
+        }
+        .speed-slider::-moz-range-thumb {
+            width:18px;
+            height:18px;
+            border-radius:50%;
+            background:linear-gradient(145deg,#6a0dad,#9c27b0);
+            cursor:pointer;
+            border:none
+        }
+        .speed-value {
+            display:none
+        }
+        .discord-btn {
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:6px;
+            width:100%;
+            padding:8px;
+            margin-top:8px;
+            background:linear-gradient(145deg,#6a0dad,#4b0082);
+            color:white;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            font-weight:bold;
+            transition:all 0.3s ease
+        }
+        .discord-btn:hover {
+            background:linear-gradient(145deg,#7b1fa2,#5e35b1);
+            transform:translateY(-2px)
+        }
+        .discord-icon {
+            width:16px;
+            height:16px
+        }
         </style><div class="crimson-header"><img src="https://crimsonstrauss.xyz/img/logo/eclipse.png"class="crimson-logo"alt="Logo">CrimsonStrauss<span class="crimson-version">v$ {
             APP.ver
         }
