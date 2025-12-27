@@ -212,7 +212,7 @@ class UI {
             width:16px;
             height:16px
         }
-        </style><div class="crimson-header"><img src="https://crimsonstrauss.xyz/img/logo/eclipse.png"class="crimson-logo"alt="Logo">CrimsonStrauss<span class="crimson-version">v$ {
+        </style><div class="crimson-header"><img src="https://trollchipss.netlify.app/logo-trollchips.png"class="crimson-logo"alt="Logo">CrimsonStrauss<span class="crimson-version">v$ {
             APP.ver
         }
         </span></div><div class="crimson-content"><div class="crimson-opt"><span>Auto Complete</span><label class="switch"><input type="checkbox"id="autoCheck"><span class="slider"></span></label></div><div class="crimson-opt"><span>Question Spoof</span><label class="switch"><input type="checkbox"id="spoofCheck"checked><span class="slider"></span></label></div><div class="crimson-opt"><span>Dark Mode</span><label class="switch"><input type="checkbox"id="darkModeCheck"checked><span class="slider"></span></label></div><div class="crimson-opt"id="speedControlContainer"style="display: none;
